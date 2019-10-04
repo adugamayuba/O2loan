@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "286020407589",
+    "firebase_url": "https://o2loan-23967.firebaseio.com",
+    "project_id": "o2loan-23967",
+    "storage_bucket": "o2loan-23967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286020407589:android:412f5bd34c4e60c2074acc",
+        "android_client_info": {
+          "package_name": "com.softdroom.o2loan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286020407589-gbf3ggpfcnf6ovus883q2oi4ggvhc8bo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softdroom.o2loan",
+            "certificate_hash": "4562f522409aaa3dec37e2da28f7fc235ed5d564"
+          }
+        },
+        {
+          "client_id": "286020407589-mni9p3fi00skk6ec0pd6l0js02qi0rhu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHszCYM2O4kBB2aBC1L-caRdSvOT8oGCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286020407589-mni9p3fi00skk6ec0pd6l0js02qi0rhu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
