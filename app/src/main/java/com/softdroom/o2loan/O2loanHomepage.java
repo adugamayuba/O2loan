@@ -17,25 +17,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 
-public class Initail_Homepage extends AppCompatActivity
+public class O2loanHomepage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-
-    LinearLayout layoutCompleteProfile;
-    LinearLayout layoutSetPin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_initail__homepage);
+        setContentView(R.layout.activity_o2loan_homepage);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-        layoutCompleteProfile = (LinearLayout) findViewById(R.id.layoutCompleteProfile);
-        layoutSetPin = (LinearLayout) findViewById(R.id.layoutSetPin);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +60,7 @@ public class Initail_Homepage extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.initail__homepage, menu);
+        getMenuInflater().inflate(R.menu.o2loan_homepage, menu);
         return true;
     }
 
@@ -94,20 +85,17 @@ public class Initail_Homepage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_initialMyLoan) {
-            layoutSetPin.setVisibility(View.GONE);
-            layoutCompleteProfile.setVisibility(View.VISIBLE);
+        if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_initialHowItWorks) {
+        } else if (id == R.id.nav_gallery) {
 
+        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_customerCare) {
+        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_setPin) {
+        } else if (id == R.id.nav_share) {
 
-            layoutCompleteProfile.setVisibility(View.GONE);
-
-            layoutCompleteProfile.setVisibility(View.VISIBLE);
+        } else if (id == R.id.nav_send) {
 
         }
 

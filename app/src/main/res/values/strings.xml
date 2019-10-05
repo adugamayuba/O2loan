@@ -52,6 +52,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_o2loan_homepage">O2loanHomepage</string>
+    <string name="no_loans_yet">No Loans Yet</string>
 
 
 </resources>

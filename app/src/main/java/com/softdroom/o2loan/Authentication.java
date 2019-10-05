@@ -88,7 +88,7 @@ public class Authentication extends AppCompatActivity {
 
         stepView = findViewById(R.id.step_view);
        stepView.setStepsNumber(3);
-       stepView.go(1, false);
+       stepView.go(1, true);
 //        stepView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 //            @Override
 //            public void onGlobalLayout() {

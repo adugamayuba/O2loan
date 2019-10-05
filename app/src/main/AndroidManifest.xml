@@ -23,7 +23,11 @@
         </activity>
         <activity android:name=".Authentication" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".O2loanHomepage"
+            android:label="@string/title_activity_o2loan_homepage"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
