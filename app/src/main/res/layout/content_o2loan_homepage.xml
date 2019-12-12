@@ -49,14 +49,57 @@
 
         </LinearLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:clickable="true"
-            app:srcCompat="@drawable/background" />
 
 
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--<Button-->
+
+                <!--android:text="1,000 - 20,000"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:textColor="@color/grey_100"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:background="@drawable/round_button"/>-->
+
+            <Button
+
+                android:background="@drawable/round_darker"
+                android:layout_gravity="center"
+                android:text="indivitual"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="25dp"
+                android:textColor="#ffffff"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <Button
+
+                android:background="@drawable/round_very_darker"
+                android:layout_gravity="center"
+                android:text="Agennt"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+
+        <!--<com.google.android.material.button.MaterialButton-->
+
+            <!--android:layout_marginTop="250dp"-->
+            <!--android:textColor="@color/grey_100"-->
+            <!--android:text="1,000 - 20,000"-->
+            <!--android:background="@drawable/round_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
 
 
 

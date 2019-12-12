@@ -10,6 +10,7 @@
 
 
     <LinearLayout
+        android:visibility="visible"
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,15 +105,29 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
+
                 <EditText
                     android:id="@+id/phonenumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginEnd="40dp"
-                    android:background="@drawable/edittext_background"
                     android:inputType="phone"
-                    android:padding="10dp" />
+                    android:focusable="true"
+                    android:hint="phone number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <!--<EditText-->
+                    <!--android:id="@+id/phonenumber"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="40dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:autofillHints="@string/hint_phone_number"-->
+                    <!--android:hint="Phone number"-->
+                    <!--android:layout_marginEnd="40dp"-->
+                    <!--android:inputType="number"-->
+                    <!--android:padding="10dp" />-->
+
+
             </LinearLayout>
 
             <TextView
@@ -132,7 +147,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/button_main_background"
+                android:background="@color/colorPrimary"
                 android:text="next"
                 android:textColor="#cfc3c3"
                 android:textStyle="bold" />

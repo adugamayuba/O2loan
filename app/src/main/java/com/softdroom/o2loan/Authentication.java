@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
 import com.shuhart.stepview.StepView;
 
 import java.util.concurrent.TimeUnit;
@@ -36,8 +37,9 @@ import static com.shuhart.stepview.StepView.ANIMATION_NONE;
 
 public class Authentication extends AppCompatActivity {
 
-    private int currentStep = 0;
-    LinearLayout layout1,layout2,layout3;
+
+    int currentStep = 0;
+
     StepView stepView;
     AlertDialog dialog_verifying,profile_dialog;
 
@@ -50,11 +52,11 @@ public class Authentication extends AppCompatActivity {
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private FirebaseAuth firebaseAuth;
 
-    private String phoneNumber;
-    private Button sendCodeButton;
-    private Button verifyCodeButton;
-    private Button signOutButton;
-    private Button button3;
+     String phoneNumber;
+     Button sendCodeButton;
+     Button verifyCodeButton;
+     Button signOutButton;
+     Button button3;
 
     private EditText phoneNum;
     private PinView verifyCodeET;
@@ -63,6 +65,7 @@ public class Authentication extends AppCompatActivity {
     private String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
 
+     public LinearLayout layout1,layout2,layout3;
 
     private FirebaseAuth mAuth;
 
@@ -72,33 +75,36 @@ public class Authentication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication);
 
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+
         mAuth = FirebaseAuth.getInstance();
 
-        layout1 = (LinearLayout) findViewById(R.id.layout1);
-        layout2 = (LinearLayout) findViewById(R.id.layout2);
-        layout3 = (LinearLayout) findViewById(R.id.layout3);
+        layout1 = findViewById(R.id.layout1);
+        layout2 =  findViewById(R.id.layout2);
+        layout3 =  findViewById(R.id.layout3);
         sendCodeButton = (Button) findViewById(R.id.submit1);
         verifyCodeButton = (Button) findViewById(R.id.submit2);
         button3 = (Button) findViewById(R.id.submit3);
         firebaseAuth = FirebaseAuth.getInstance();
-        phoneNum = (EditText) findViewById(R.id.phonenumber);
+     phoneNum = (EditText) findViewById(R.id.phonenumber);
         verifyCodeET = (PinView) findViewById(R.id.pinView);
         phonenumberText = (TextView) findViewById(R.id.phonenumberText);
 
 
+
         stepView = findViewById(R.id.step_view);
        stepView.setStepsNumber(3);
-       stepView.go(1, true);
-//        stepView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//                stepView.setStepsNumber(3);
-//                stepView.go(1, false);
-//            }
-//        });
+       stepView.go(0, true);
+        stepView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                stepView.setStepsNumber(3);
+                stepView.go(1, false);
+                layout1.setVisibility(View.VISIBLE);
+            }
+        });
 
-
-        layout1.setVisibility(View.VISIBLE);
 
         sendCodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,8 +127,8 @@ public class Authentication extends AppCompatActivity {
                     } else {
                         stepView.done(true);
                     }
-                    layout1.setVisibility(View.GONE);
-                    layout2.setVisibility(View.VISIBLE);
+//                    layout1.setVisibility(View.GONE);
+//                    layout2.setVisibility(View.VISIBLE);
                     PhoneAuthProvider.getInstance().verifyPhoneNumber(
                             phoneNumber,        // Phone number to verify
                             60,                 // Timeout duration
@@ -184,6 +190,10 @@ public class Authentication extends AppCompatActivity {
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, verificationCode);
                     signInWithPhoneAuthCredential(credential);
 
+
+                    Intent mgoToInitialhomepage = new Intent();
+                    mgoToInitialhomepage.setClass(Authentication.this, Initail_Homepage.class);
+                    startActivity(mgoToInitialhomepage);
                 }
             }
         });

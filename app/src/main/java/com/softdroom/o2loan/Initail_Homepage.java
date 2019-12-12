@@ -107,7 +107,7 @@ public class Initail_Homepage extends AppCompatActivity
 
             layoutCompleteProfile.setVisibility(View.GONE);
 
-            layoutCompleteProfile.setVisibility(View.VISIBLE);
+            layoutSetPin.setVisibility(View.VISIBLE);
 
         }
 
